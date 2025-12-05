@@ -1,0 +1,29 @@
+{
+  "name": "Tutorial_Playwright_Batch112025",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:awesome-academy/Tutorial_Playwright_Batch112025.git",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^24.10.1"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report",
+    "test:login": "playwright test tests/login",
+    "lint": "eslint . --ext .ts,.tsx --fix",
+    "lint:check": "eslint . --ext .ts,.tsx",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "format:staged": "lint-staged",
+    "type-check": "tsc --noEmit",
+    "quality:check": "pnpm lint:check && pnpm format:check && pnpm type-check",
+    "quality:fix": "pnpm lint && pnpm format",
+    "prepare": "husky",
+    "pre-commit": "lint-staged"
+  }
+}
